@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.porto.controller.PortoController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.porto.controller.PortoController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="520.0" prefWidth="337.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Autore 1">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Text>
+            <ChoiceBox fx:id="listA1" prefHeight="31.0" prefWidth="261.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></ChoiceBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Autore 2" />
+            <ChoiceBox fx:id="listA2" prefWidth="261.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></ChoiceBox>
+            <Button fx:id="btncoAuthor" mnemonicParsing="false" onAction="#viewCoAuthor" prefWidth="261.0" text="Visualizza Coautori">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnCluster" mnemonicParsing="false" onAction="#viewCluster" prefWidth="261.0" text="Visualizza Cluster">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnArticles" mnemonicParsing="false" onAction="#viewArticles" prefWidth="261.0" text="Visualizza Articoli">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <ProgressBar fx:id="proBar" prefHeight="23.0" prefWidth="322.0" progress="0.0" translateY="100.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <TextArea fx:id="textResult" editable="false" prefHeight="520.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin></TextArea>
+   </right>
+   <bottom>
+      <HBox prefHeight="25.0" prefWidth="1021.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#reset" text="Reset" />
+            <Label fx:id="messageWarning" alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="955.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
 </BorderPane>
